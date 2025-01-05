@@ -4,6 +4,14 @@
 FitGarages is a **Flutter mobile application** designed to offer users a seamless and intuitive experience with a focus on platform-specific navigation, dynamic widget creation, and Razorpay payment integration. The app also fetches and displays **location** and **device information** while providing a modern, visually appealing UI.
 
 <img src="https://github.com/user-attachments/assets/1386b4b8-7c73-4c30-a83d-d8285fc50bff" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/e61e35a7-78e7-4f43-b38a-948ed66a2207" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/52779b63-ca6f-497d-81c0-b11129e9348d" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/01f65b09-2a66-4580-ac6b-34f8c6962a09" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/2aa884bd-dd2c-46cf-b224-778202f507fe" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/ded4f781-4553-49e6-8460-9ce06efa7e07" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/25ce39a1-dcc0-4794-a4ed-b790932e756c" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/1b592948-a77c-4d54-8e97-4e2cadbbac68" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/b297f7ca-559e-4d76-8f00-395eb0f5ec09" width="300" height="600" />
 
 ## **Problem Statement**
 
