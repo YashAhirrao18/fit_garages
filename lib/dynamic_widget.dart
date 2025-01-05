@@ -59,7 +59,7 @@ class _DynamicWidgetPageState extends State<DynamicWidgetPage> {
   Future<void> _showLoadingDialog() async {
     showDialog(
       context: context,
-      barrierDismissible: false, // Prevent dialog from being dismissed manually
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return Dialog(
           child: Padding(
@@ -80,7 +80,6 @@ class _DynamicWidgetPageState extends State<DynamicWidgetPage> {
 
   // Function to navigate to details page with data
   void _navigateToDetailsPage(Map<String, dynamic> data) async {
-    // Show loading dialog
     await _showLoadingDialog();
 
     bool hasPermission = await _requestLocationPermission();
@@ -91,7 +90,7 @@ class _DynamicWidgetPageState extends State<DynamicWidgetPage> {
       final location = await Geolocator.getCurrentPosition();
 
       // Dismiss loading dialog
-      Navigator.of(context).pop(); // Close the dialog
+      Navigator.of(context).pop();
 
       if (deviceInfo == null || location == null) {
         Navigator.push(
@@ -143,7 +142,7 @@ class _DynamicWidgetPageState extends State<DynamicWidgetPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Dynamic Widgets"),
-        backgroundColor: Colors.blueAccent, // Custom color for AppBar
+        backgroundColor: Colors.blueAccent,
       ),
       body: widgetsData.isEmpty
           ? Center(

@@ -10,8 +10,7 @@ class ScrollingBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height *
-          0.2, // Adjust the height as needed
+      height: MediaQuery.of(context).size.height * 0.2,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: bannerItems.length,
@@ -19,25 +18,24 @@ class ScrollingBanner extends StatelessWidget {
           return Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0),
             child: Container(
-              width: MediaQuery.of(context).size.width *
-                  0.9, // Adjust width as needed
+              width: MediaQuery.of(context).size.width * 0.9,
               decoration: BoxDecoration(
-                color: Colors.blueAccent, // Background color for the banner
+                color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(12.0),
                 boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 10)],
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  // Column 1: Image in a square box, centered
+                  // Column 1: Image centered
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      width: 100, // Fixed width for the image box
-                      height: 100, // Fixed height for the image box
+                      width: 100,
+                      height: 100,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.grey.shade300, // Placeholder color
+                        color: Colors.grey.shade300,
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
@@ -46,8 +44,7 @@ class ScrollingBanner extends StatelessWidget {
                           fit: BoxFit.cover,
                           errorBuilder: (context, error, stackTrace) {
                             return Center(
-                              child: Icon(Icons.error,
-                                  color: Colors.red), // Error icon
+                              child: Icon(Icons.error, color: Colors.red),
                             );
                           },
                         ),
@@ -92,13 +89,12 @@ class ScrollingBanner extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      MockPaymentDemo(), // Ensure PaymentPage is imported correctly
+                                  builder: (context) => MockPaymentDemo(),
                                 ),
                               );
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange, // Button color
+                              backgroundColor: Colors.orange,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8.0),
                               ),

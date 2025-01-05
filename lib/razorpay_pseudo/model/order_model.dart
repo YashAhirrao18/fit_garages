@@ -16,7 +16,7 @@ class MockRazorpayOrder {
   static MockRazorpayOrder createMockOrder() {
     return MockRazorpayOrder(
       orderId: "mock_order_12345",
-      amount: 50000, // In paise
+      amount: 50000,
       currency: "INR",
       receipt: "mock_receipt_001",
     );

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fit_garages/dynamic_widget.dart';
 import 'android_drawer.dart';
 import 'bottom_nav_bar.dart';
-import 'scrolling_banner.dart'; // Import the scrolling banner widget
+import 'scrolling_banner.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   String _selectedTitle = "Home";
   IconData _selectedIcon = Icons.home;
 
-  // Corrected list of banner items with heading, subheading, and image URL
+  // list of banner items with heading, subheading, and image path
   final List<Map<String, String>> bannerItems = [
     {
       'heading': 'Welcome to FitGarages',
@@ -76,10 +76,7 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Colors.blue[100]!,
-              Colors.blue[200]!
-            ], // Adjusted color to better match the banner
+            colors: [Colors.blue[100]!, Colors.blue[200]!],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -152,9 +149,8 @@ class _HomePageState extends State<HomePage> {
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 10,
                       ),
-                      itemCount: 8, // Number of items in the grid
+                      itemCount: 8,
                       itemBuilder: (context, index) {
-                        // Assign different cards based on index
                         List<Map<String, dynamic>> actionItems = [
                           {
                             'icon': Icons.build,
@@ -262,15 +258,14 @@ class _HomePageState extends State<HomePage> {
       context: context,
       builder: (ctx) => Dialog(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0), // Rounded corners
+          borderRadius: BorderRadius.circular(20.0),
         ),
-        elevation: 24.0, // Shadow effect
+        elevation: 24.0,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisSize: MainAxisSize.min, // Use the minimum space needed
+            mainAxisSize: MainAxisSize.min,
             children: [
-              // Icon at the top of the dialog
               Icon(
                 Icons.person_add,
                 size: 40,
@@ -297,16 +292,14 @@ class _HomePageState extends State<HomePage> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 20),
-              // Buttons container: Stretch buttons across the full width
+
               Row(
                 children: [
-                  // Cancel button (stretching to left side)
                   Expanded(
                     child: TextButton(
                       onPressed: () => Navigator.of(ctx).pop(),
                       style: TextButton.styleFrom(
-                        side: BorderSide(
-                            color: Colors.blueAccent), // Border color
+                        side: BorderSide(color: Colors.blueAccent),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
@@ -320,8 +313,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 10), // Space between buttons
-                  // Yes button (stretching to right side)
+                  SizedBox(width: 10),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
@@ -334,8 +326,7 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Colors.blueAccent, // Button background color
+                        backgroundColor: Colors.blueAccent,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
